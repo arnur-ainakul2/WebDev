@@ -1,0 +1,40 @@
+<div class="card"><a [href]="product.link" target="_blank">
+  <img [src]="selectedImage" [alt]="product.name" class="main-image">
+</a>
+
+  <div class="thumbnails">
+    @for (img of product.images; track $index) {
+      <img
+        [src]="img"
+        [alt]="product.name"
+        (click)="selectImage(img)"
+        [class.active]="img === selectedImage"
+        class="thumbnail"
+      >
+    }
+  </div>
+
+  <div class="card-body">
+    <a [href]="product.link" target="_blank">
+      <h3>{{ product.name }}</h3>
+    </a>
+
+    <p class="description">{{ product.description }}</p>
+
+    <div class="rating">
+      @for (star of getStars(); track $index) {
+        <span>{{ star }}</span>
+      }
+      <span class="rating-number">{{ product.rating }}</span>
+    </div>
+
+    <h4 class="price">{{ product.price }} ₸</h4>
+
+    <div class="share-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/3840px-WhatsApp.svg.png" width="20px" height="20px">
+    <a [href]="getWhatsAppLink()" target="_blank" class="share-btn">
+      Share в WhatsApp
+    </a>
+  </div>
+  </div>
+</div>

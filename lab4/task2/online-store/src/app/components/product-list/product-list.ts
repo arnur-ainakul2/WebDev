@@ -1,0 +1,115 @@
+import { Component } from '@angular/core';
+import {Product} from '../../product.model';
+import {ProductCard} from '../product-card/product-card'
+@Component({
+  selector: 'app-product-list',
+  imports: [ProductCard],
+  templateUrl: './product-list.html',
+  styleUrl: './product-list.css',
+})
+export class ProductList {
+  products: Product[]=[
+    {
+      id: 1,
+      name: '27 Xiaomi A27i P27FBA-RAGL черный',
+      description: 'это 27-дюймовый монитор с разрешением Full HD (1920x1080) и IPS-матрицей',
+      price: 59990,
+      rating: 4.8,
+      image:'https://resources.cdn-kaspi.kz/img/m/p/p2c/pf8/38387896.png?format=gallery-medium',
+      images:['https://resources.cdn-kaspi.kz/img/m/p/p2c/pf8/38387896.png?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p64/pf8/38387898.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p80/pf8/38387899.jpg?format=gallery-medium'],
+      link:'https://kaspi.kz/shop/p/27-xiaomi-a27i-p27fba-ragl-chernyi-114861006/?c=750000000'
+    },
+    {
+      id: 2 ,
+      name: '21.45" XTREON XT2253DE черный',
+      description: 'XTREON XT2253DE — отличное решение для работы и развлечений.',
+      price: 34990,
+      rating: 4.9,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/p93/p79/57949681.jpg?format=gallery-medium',
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/p93/p79/57949681.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/pf1/p75/57949693.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p80/p75/57949697.jpg?format=gallery-medium'],
+      link:'https://kaspi.kz/shop/p/21-45-xtreon-xt2253de-chernyi-113769024/?c=750000000' ,
+    },
+    {
+      id: 3 ,
+      name:'27" XTREON XT2769VD черный',
+      description: 'Игровой монитор XTREON XT2769VD — идеальный выбор для геймеров.',
+      price:79990,
+      rating: 5.0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/p3b/pd7/57070263.jpg?format=gallery-medium',
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/p3b/pd7/57070263.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/pf9/pda/57070276.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/pf2/pdd/57070282.jpg?format=gallery-medium'],
+      link:'https://kaspi.kz/shop/p/27-xtreon-xt2769vd-chernyi-113465095/?c=750000000',
+    },
+    {
+      id: 4 ,
+      name: '24.5" MSI MAG255XF черный',
+      description: 'Игровой монитор MSI MAG255XF — высококачественное решение для геймеров,',
+      price: 93898,
+      rating: 4.7,
+      image:'https://resources.cdn-kaspi.kz/img/m/p/p46/p08/14795526.png?format=gallery-medium' ,
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/p46/p08/14795526.png?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p3f/p0b/14795532.png?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p5b/p0b/14795533.png?format=gallery-medium'],
+      link: 'https://kaspi.kz/shop/p/24-5-msi-mag255xf-chernyi-131894370/?c=750000000',
+    },
+    {
+      id: 5 ,
+      name: '23.8" Xiaomi Gaming Monitor',
+      description: 'Игровой монитор Xiaomi Gaming Monitor G24i 2026 P24FDA-RGGL — погружение в мир игр с высокой детализацией',
+      price: 64926,
+      rating: 4.9,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/p08/p45/65975207.jpg?format=gallery-medium',
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/p08/p45/65975207.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/pbb/p04/60551071.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p44/p07/60551069.jpg?format=gallery-medium'],
+      link:'https://kaspi.kz/shop/p/23-8-xiaomi-gaming-monitor-g24i-2026-p24fda-rggl-chernyi-144629223/?c=750000000',
+    },
+    {
+      id: 6 ,
+      name: '27" Xiaomi Redmi G27Q 240Hz P27QDA-RG черный',
+      description:'Игровой монитор Xiaomi Redmi G27Q с диагональю 27 дюймов — отличное решение для динамичных игр',
+      price:118644,
+      rating:4.8,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/pf4/pc3/42930761.jpeg?format=gallery-medium',
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/pf4/pc3/42930761.jpeg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/pc8/pca/42930763.jpeg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p32/pce/42930764.jpeg?format=gallery-medium'],
+      link:'https://kaspi.kz/shop/p/27-xiaomi-redmi-g27q-240hz-p27qda-rg-chernyi-139856428/?c=750000000' ,
+    },
+    {
+      id: 7 ,
+      name:'27" XTREON XT27N1 черный',
+      description:'XTREON XT27N1 — 27-дюймовый игровой монитор с разрешением 2560x1440 и частотой обновления 180 Гц',
+      price:79990,
+      rating:4.6,
+      image:'https://resources.cdn-kaspi.kz/img/m/p/pd1/pe5/56721926.png?format=gallery-medium',
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/pd1/pe5/56721926.png?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/ped/pe5/56721927.png?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p4f/pec/56721943.jpg?format=gallery-medium'],
+      link:'https://kaspi.kz/shop/p/27-xtreon-xt27n1-chernyi-140680986/?c=750000000',
+    },
+    {
+      id: 8 ,
+      name:'24.5" XTREON XT2563VH черный',
+      description:'Погрузитесь в мир высококачественной графики с игровым монитором XTREON XT2563VH!',
+      price:79990,
+      rating:5.0,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/pd6/p3f/56476768.jpg?format=gallery-medium',
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/pd6/p3f/56476768.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p46/pa2/56477334.png?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/pc7/p9b/56477351.png?format=gallery-medium'],
+      link:'https://kaspi.kz/shop/p/24-5-xtreon-xt2563vh-chernyi-130675209/?c=750000000',
+    },
+    {
+      id: 9 ,
+      name:'23.6" СX-Мани-23.6 черный',
+      description: 'Этот 23,6-дюймовый игровой монитор создан для профессиональных киберспортсменов',
+      price:28980,
+      rating:4.5,
+      image:'https://resources.cdn-kaspi.kz/img/m/p/p3f/p6b/75614532.jpg?format=gallery-medium',
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/p3f/p6b/75614532.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/pb2/p6a/75614537.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/pf1/p67/75614541.jpg?format=gallery-medium'],
+      link:'https://kaspi.kz/shop/p/23-6-sx-mani-23-6-chernyi-148911699/?c=750000000',
+    },
+    {
+      id: 10 ,
+      name:'27" Xiaomi Gaming Monitor G27Qi P27QCA-RGGL черный',
+      description:'Благодаря разрешению 2K до 2560 x 1440 и использованию быстрого IPS LCD вы можете быстро реагировать',
+      price: 149998,
+      rating: 4.4,
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/pf6/p88/38467877.jpg?format=gallery-medium',
+      images: ['https://resources.cdn-kaspi.kz/img/m/p/pf6/p88/38467877.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/pb6/p8b/38467881.jpg?format=gallery-medium','https://resources.cdn-kaspi.kz/img/m/p/p27/p8c/38467885.jpg?format=gallery-medium'],
+      link:'https://kaspi.kz/shop/p/27-xiaomi-gaming-monitor-g27qi-p27qca-rggl-chernyi-123291223/?c=750000000',
+    },
+
+  ]
+
+}
