@@ -1,0 +1,10 @@
+.loading { padding: 10px 0; color: #555; }
+
+.list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.item { display: flex; justify-content: space-between; align-items: center; border: 1px solid #eee; padding: 10px 12px; border-radius: 12px; }
+
+.title { text-decoration: none; color: #222; }
+.title:hover { text-decoration: underline; }
+
+.del { border: none; border-radius: 10px; padding: 8px 10px; cursor: pointer; background: #ff4d4d; color: #fff; }
+.empty { margin-top: 14px; color: #666; }
