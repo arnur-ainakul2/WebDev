@@ -1,0 +1,28 @@
+<div class="layout">
+  <aside class="sidebar">
+    <h2 class="logo">Online Store</h2>
+
+    <div class="categories">
+      <button
+        class="cat-btn"
+        *ngFor="let c of categories"
+        [class.active]="c.id === selectedCategoryId"
+        (click)="selectCategory(c)"
+      >
+        {{ c.name }}
+      </button>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div *ngIf="!selectedCategoryId" class="welcome">
+      <h1>Welcome 👋</h1>
+      <p>Select a category to view products.</p>
+    </div>
+
+    <app-product-list
+      *ngIf="selectedCategoryId"
+      [products]="visibleProducts"
+    ></app-product-list>
+  </main>
+</div>
